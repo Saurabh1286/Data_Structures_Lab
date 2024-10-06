@@ -5,7 +5,7 @@ class Node {
     int data;
     Node left, right;
 
-    public Node(int data) {
+    Node(int data) {
         this.data = data;
         this.left = this.right = null;
     }    
@@ -15,7 +15,7 @@ public class Binary_Search_Tree {
 
     Node root;
 
-    public Binary_Search_Tree() {
+    Binary_Search_Tree() {
         root = null;
     }
     
@@ -76,7 +76,7 @@ public class Binary_Search_Tree {
         }
     }
 
-    void inOrder() {
+    void inorder() {
         inOrder_priv (root);
     }
 
@@ -209,7 +209,7 @@ public class Binary_Search_Tree {
                         int c = sc.nextInt();
                         switch(c){
                             case 1 -> {
-                                bst.inOrder();
+                                bst.inorder();
                                 System.out.print("\n");
                         }
                             case 2 -> {
