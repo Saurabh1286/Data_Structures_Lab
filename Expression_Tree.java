@@ -8,7 +8,7 @@ class Stack {
 
     Stack () {
         this.stk = new Node[100];
-        this.top = -1;
+        top = -1;
     }
 
     void push (Node pushNode) {
@@ -56,11 +56,24 @@ class Binary_Search_Tree {
 
     private void inorder_priv (Node root) {
         if (root == null) {
-            return ;
+            return;
         }
         inorder_priv(root.left);
         System.out.print(root.data);
         inorder_priv(root.right);
+    }
+
+    void preorder () {
+        preorder_priv (this.root);
+    }
+
+    private void preorder_priv (Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data);
+        preorder_priv(root.left);
+        preorder_priv(root.right);
     }
 }
 
@@ -98,5 +111,8 @@ public class Expression_Tree {
         Binary_Search_Tree bst = Expression_Tree.expression_tree(expressionArray);
         System.out.print("Infix Expression : ");
         bst.inorder();
+        System.out.println();
+        System.out.print("Prefix Expression : ");
+        bst.preorder();
     }
 }
