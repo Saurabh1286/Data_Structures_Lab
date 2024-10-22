@@ -31,11 +31,11 @@ public class Sort1 {
                     min = j;
                 }
             }
-            Sort1.swap(min, i, temp);
+            swap(min, i, temp);
         }
         System.out.println("\nSelection Sort :");
         System.out.print("Sorted Array : ");
-        Sort1.printarr(temp);
+        printarr(temp);
     }
 
     void insertionsort () {
@@ -43,13 +43,13 @@ public class Sort1 {
         for  (int i = 1; i < arr.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (temp[j] < temp[j-1]) {
-                    Sort1.swap(j, j-1, temp);
+                    swap(j, j-1, temp);
                 }
             }
         }
         System.out.println("\nInsertion Sort :");
         System.out.print("Sorted Array : ");
-        Sort1.printarr(temp);
+        printarr(temp);
     }
 
     void mergesort () {
@@ -57,7 +57,7 @@ public class Sort1 {
         mergesort_priv(temp);
         System.out.println("\nMerge Sort :");
         System.out.print("Sorted Array : ");
-        Sort1.printarr(temp);
+        printarr(temp);
     }
 
     private void mergesort_priv (int[] temp) {
