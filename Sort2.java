@@ -29,7 +29,7 @@ public class Sort2 {
         quicksort_priv(temp, 0, temp.length - 1);
         System.out.println("\nQuick Sort : ");
         System.out.print("Sorted Array : ");
-        Sort2.printarr(temp);
+        printarr(temp);
     }
 
     private void quicksort_priv (int[] arr, int left, int right) {
@@ -46,10 +46,10 @@ public class Sort2 {
         for (int j = left; j < right; j++) {
             if (arr[j] <= pivot) {
                 i++;
-                Sort2.swap(i, j, arr);
+                swap(i, j, arr);
             }
         }
-        Sort2.swap(i + 1, right, arr);
+        swap(i + 1, right, arr);
         return i + 1;
     }
 
@@ -58,7 +58,7 @@ public class Sort2 {
         heapsort_priv(temp);
         System.out.println("\nHeap Sort : ");
         System.out.print("Sorted Array : ");
-        Sort2.printarr(temp);
+        printarr(temp);
     }
 
     private void heapsort_priv (int[] array) {
@@ -69,7 +69,7 @@ public class Sort2 {
         }
 
         for (int i = n - 1; i > 0; i--) {
-            Sort2.swap(0, i, array);
+            swap(0, i, array);
             heapify(array, i ,0);
         }
     }
@@ -88,7 +88,7 @@ public class Sort2 {
         }
 
         if (largest != i) {
-            swap (i, largest, array);
+            swap(i, largest, array);
             heapify(array, n, largest);
         }
     }
@@ -98,7 +98,7 @@ public class Sort2 {
         bucketsort_priv(temp);
         System.out.println("\nBucket Sort : ");
         System.out.print("Sorted Array : ");
-        Sort2.printarr(temp);
+        printarr(temp);
     }
 
     private void bucketsort_priv(int[] array) {
