@@ -153,7 +153,7 @@ public class Binary_Search_Tree {
             if (root.right == null) {
                 return root.left;
             }
-            Node curr = root;
+            Node curr = root.right;
             while (curr.left != null) {
                 curr = curr.left;
             }
